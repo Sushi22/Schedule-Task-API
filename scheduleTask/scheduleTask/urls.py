@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url,include
 from django.urls import path
-from api.views import PingView,ScheduleView
+from api.views import PingView,ScheduleView,BaseView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^api/', BaseView.as_view()),
     url(r'^api/ping/$',PingView.as_view()), # ping endpoint
     url(r'^api/(?P<date>[0-9A-Za-z_\- :.]+)/(?P<url>https?:\/\/[^\s]+)/$',ScheduleView.as_view()) # schedule endpoint
 ]

@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponseNotFound
 from django.views import View
 import requests
 import datetime
 
+class BaseView(View):
+    def get(self, request):
+        return HttpResponseNotFound('<h1>No Response for basepath<h1>')
 """
     This is the ping endpoint view, 
     which returns status if the server is live.
