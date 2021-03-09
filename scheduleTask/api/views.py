@@ -12,7 +12,6 @@ class PingView(View):
     def get(self,request):
         return JsonResponse({'status':'OK'})
 
-
 """
     This is the schedule view,which sends request to the URL appended to this endpoint,
     returns valid status if datetime matches with current datetime, if not then sends an error message.
