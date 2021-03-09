@@ -20,8 +20,8 @@ class PingView(View):
     returns valid status if datetime matches with current datetime, if not then sends an error message.
 """
 class ScheduleView(View):
-    def get(self,request,datetime,url):
-        DATETIME = datetime
+    def get(self,request,date,url):
+        DATETIME = date
         URL = url
 
         # formatting the datetime parameter on the endpoint by removing 'seconds' from timestamp

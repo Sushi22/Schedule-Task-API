@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/$', BaseView.as_view()),
     url(r'^api/ping/$',PingView.as_view()), # ping endpoint
-    url(r'^api/(?P<datetime>[0-9A-Za-z_\- :.]+)/(?P<url>https?:\/\/[^\s]+)/$',ScheduleView.as_view()) # schedule endpoint
+    url(r'^api/(?P<date>[0-9A-Za-z_\- :.]+)/(?P<url>https?:\/\/[^\s]+)/$',ScheduleView.as_view()) # schedule endpoint
 ]
