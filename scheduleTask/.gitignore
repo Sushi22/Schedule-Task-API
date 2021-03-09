@@ -1,6 +1,4 @@
 settings.json
 *.pyc
 db.sqlite3
-error.json
-schedule.json
-ping.json
+/schemas
